@@ -1,5 +1,6 @@
 class CoursesController < ApplicationController
   #  before_filter :find_model
+  skip_before_action :require_user
 
     def index
         @courses = Course.all
